@@ -101,3 +101,20 @@ Citar e descrever 3 cenários de trade-offs (ver slide 12, mas usar outros exemp
 ---
 
 
+## Atividade 3 - 23/02/2026
+#### 5 -  É possivel testar tudo?
+
+>int blech (int j){
+>
+> j = j - 1 //deveria ser j = j + 1
+>
+> j = j //30 000;
+>
+> return j;
+>
+>}
+
+Quantas entradas mostram com o erro?
+
+Quais não?
+ 
