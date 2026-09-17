@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sessão Noturna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.2.1/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <div class="cortina cortina-esq"></div>
+    <div class="cortina cortina-dir"></div>
+
+    <header class="topo">
+        <div class="faixa-filme"></div>
+        <div class="topo-conteudo">
+            <h1 class="logo">Locadora <span>Sessão Noturna</span></h1>
+            <p class="slogan">Aluguel de filmes desde sempre — clima de videolocadora, banco de dados por baixo dos panos</p>
+            <button id="btnAbrirModal" class="btn-neon">+ Novo filme na estante</button>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <div class="barra-busca">
+            <span class="icone-busca">&#128269;</span>
+            <input type="text" id="campoBusca" placeholder="Procurar filme na estante...">
+        </div>
+
+        <section id="filme-list" class="prateleira">
+            <!-- filmes injetados via JS -->
+        </section>
+
+        <p id="mensagemVazia" class="mensagem-vazia d-none">Nenhum filme encontrado nesta estante.</p>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; Sessão Noturna &mdash; "Seja bem-vindo, sempre tem uma fita esperando por voce."</p>
+    </footer>
+
+    <!-- Modal de novo filme -->
+    <div id="modalOverlay" class="modal-overlay d-none">
+        <div class="modal-caixa">
+            <button id="btnFecharModal" class="modal-fechar">&times;</button>
+            <h2 class="modal-titulo">Cadastrar novo filme</h2>
+
+            <div class="campo">
+                <label for="nomeFilme">Titulo</label>
+                <input type="text" id="nomeFilme" placeholder="Ex: Matrix">
+            </div>
+
+            <div class="campo">
+                <label for="generoFilme">Genero</label>
+                <input type="text" id="generoFilme" placeholder="Ex: Ficcao Cientifica">
+            </div>
+
+            <div class="campo campo-linha">
+                <div>
+                    <label for="anoFilme">Ano</label>
+                    <input type="number" id="anoFilme" placeholder="1999">
+                </div>
+                <div class="campo-checkbox">
+                    <label for="disponivelFilme">Disponivel na estante</label>
+                    <input type="checkbox" id="disponivelFilme" checked>
+                </div>
+            </div>
+
+            <button id="submitBtn" class="btn-neon btn-largo">Adicionar a locadora</button>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
